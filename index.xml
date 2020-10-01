@@ -6,10 +6,21 @@
     <description>Recent content on Shefin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Feb 2020 21:44:41 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2020 18:04:32 +0600</lastBuildDate>
     
 	<atom:link href="https://shefin-cse16.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Modular Inverse Related Optimizations</title>
+      <link>https://shefin-cse16.github.io/post/mod-inverse-optimization/</link>
+      <pubDate>Thu, 01 Oct 2020 18:04:32 +0600</pubDate>
+      
+      <guid>https://shefin-cse16.github.io/post/mod-inverse-optimization/</guid>
+      <description>[মডুলার অ্যারিথমেটিক এবং ইনভার্স সম্পর্কে জানতে এসব লিংকে ঘুরে আসা যেতে পারেঃ মডুলার অ্যারিথমেটিক , Modular Inverse]
+কোনো কোনো প্রবলেমে অনেক নাম্বারের মডুলার ইনভার্স প্রিক্যালকুলেট করে রাখতে হয় । তখন TLE থেকে বাঁচতে এই টাইপের অপটিমাইজেশন প্রয়োজন হয় । যেমনঃ KUET IUPC, 2019 এর F নং প্রবলেমটা । সাথে একটা জিনিসও জানা থাকা দরকার । অতিরিক্ত $mod$ অপারেশনও প্রচুর সময় খরচ করে TLE দিতে পারে ।
+আলোচনার সুবিধার্থে ধরে নিচ্ছি আমরা মডুলার ইনভার্স বের করব একটি মৌলিক সংখ্যা m এর সাপেক্ষে ।</description>
+    </item>
     
     <item>
       <title>Matrix Exponentiation: O(n²logx) per Query</title>

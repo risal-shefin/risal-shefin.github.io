@@ -1,16 +1,16 @@
 ---
-title: "Light Oj 1120: Rectangle Union with Multiset Editorial"
+title: "Light Oj 1120: Rectangle Union Editorial with Multiset"
 date: 2020-10-01T21:51:20+06:00
 draft: false
-tags: ["LOJ 1120", "Light OJ 1120", "Line Sweeping", "Multiset"]
+tags: ["LOJ 1120", "Light OJ 1120", "Line Sweeping", "Multiset", "Editorial"]
 index: true
-description: "Light Oj 1120: Rectangle Union with Multiset Editorial"
+description: "Light Oj 1120: Rectangle Union Editorial with Multiset"
 highlight: true
 ---
 
 ##
 
-![](https://lh3.googleusercontent.com/MYHzwBqJGGxl5gw1OR5vZiYMcYVemWvesF9I6hvFXgUGZ6DQyG0_UyuVbf0knTKHPKBuHz923pK3TRWDyBggmzwuz_S8PqhlUJmLD2xGFhwR1OhWj0zpmFPUNDXGadeEvZSBsvw4S_t6VFmoWQ)![](https://docs.google.com/drawings/u/0/d/sUXjtCPJhpqFSYlXY4hX5Og/image?w=12&h=8&rev=1&ac=1&parent=1qOITHSfJdUUhJw7R5z_dIAQWxjEhsr4nsHm6A4OMdpA)
+![](https://lh3.googleusercontent.com/MYHzwBqJGGxl5gw1OR5vZiYMcYVemWvesF9I6hvFXgUGZ6DQyG0_UyuVbf0knTKHPKBuHz923pK3TRWDyBggmzwuz_S8PqhlUJmLD2xGFhwR1OhWj0zpmFPUNDXGadeEvZSBsvw4S_t6VFmoWQ)
 
 **প্রবলেমঃ** $n$ সংখ্যক “Axis Parallel” আয়তক্ষেত্রের বামদিকের নিচের কর্নার এবং ডানদিকের উপরের কর্নারের কো-অর্ডিনেট দেওয়া থাকবে । বের করতে হবে আয়তক্ষেত্রগুলো দ্বারা আবদ্ধ ক্ষেত্রের ক্ষেত্রফল কত ?
 
@@ -29,40 +29,52 @@ $(ABGF + BSIH + CDJI + DNLJ + OPML)$ এর ক্ষেত্রফল = এই
 
 **বাম থেকে ডানে যাওয়ার এই বেসিক আইডিয়াটাই লাইন সুইপিং।**
 
-**Multiset:** $Multiset$ হচ্ছে এমন একটি কনটেইনার যেখানে ইনসার্ট করা ভ্যালুগুলো বাই ডিফল্ট $Ascending$  সর্টেড হয়ে থাকে ।
 
-**Declaration:** $multiset <int> mset;$
+* **Multiset:** $Multiset$ হচ্ছে এমন একটি কনটেইনার যেখানে ইনসার্ট করা ভ্যালুগুলো বাই ডিফল্ট $Ascending$  সর্টেড হয়ে থাকে ।
 
-**Iterator:** $multiset <int> ::iterator \space it;$
+* **Declaration:** $multiset \<int> mset;$
+
+* **Iterator:** $multiset \<int> ::iterator \space it;$
+
 
 **Some Functions:**
 
-**Insert:** $mset.insert(num);$ [$num$ ভ্যারিয়েবলের ভ্যালু ইনসার্ট করে]
+* **Insert:** $mset.insert(num);$ [$num$ ভ্যারিয়েবলের ভ্যালু ইনসার্ট করে]
 
-**Erase (by iterator):** $mset.erase(it);$ [ইটারেটরের পয়েন্টকৃত মেমরির ভ্যালু ইরেজ করে]
+* **Erase (by iterator):** $mset.erase(it);$ [ইটারেটরের পয়েন্টকৃত মেমরির ভ্যালু ইরেজ করে]
 
-**Erase (by value):** $mset.erase(num);$ [$num$-র সমান সকল ভ্যালু ইরেজ করে]
+* **Erase (by value):** $mset.erase(num);$ [$num$-র সমান সকল ভ্যালু ইরেজ করে]
 
-**Find (by value):** $mset.find(num);$ [$Multiset$ থেকে $num$-র সমান একটি ভ্যালু খুঁজে বের করে তার $Iterator$ রিটার্ন করে । খুঁজে না পেলে $mset.end()$ এর সমান iterator রিটার্ন করে ]
+* **Find (by value):** $mset.find(num);$ [$Multiset$ থেকে $num$-র সমান একটি ভ্যালু খুঁজে বের করে তার $Iterator$ রিটার্ন করে । খুঁজে না পেলে $mset.end()$ এর সমান iterator রিটার্ন করে ]
 
-$Multiset$ থেকে $num$ এর সমান একটি ভ্যালু ইরেজ করার উপায়ঃ
+> $Multiset$ থেকে $num$ এর সমান একটি ভ্যালু ইরেজ করার উপায়ঃ
 
 $it = mset.find(num);$
-$if(it \space != mset.end() \{$
-$\quad mset.erase(it);$
-$\}$
 
-$Multiset$ এর মিনিমাম ভ্যালুঃ
+$if  ( it != mset.end()) \lbrace$
+
+$\quad mset.erase(it);$
+
+$\rbrace$
+
+> $Multiset$ এর মিনিমাম ভ্যালুঃ
 
 $it = mset.begin()$
-$if(mset.size() != 0) \{$
-$\quad minimum = *it;$
-$\}$
 
-$Multiset$ এর ম্যাক্সিমাম ভ্যালুঃ
+$if(mset.size() != 0) \lbrace$
+
+$\quad minimum = *it;$
+
+$\rbrace$
+
+> $Multiset$ এর ম্যাক্সিমাম ভ্যালুঃ
 
 $it = mset.end();$
-$it--;$
-$if(mset.size() != 0) \{$
+
+$it- -;$
+
+$if(mset.size() != 0) \lbrace$
+
 $\quad maximum = *it;$
-$\}$
+
+$\rbrace$

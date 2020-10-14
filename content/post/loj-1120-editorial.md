@@ -1,6 +1,6 @@
 ---
 title: "Light OJ 1120: Rectangle Union Editorial with Multiset"
-date: 2020-10-15T21:51:20+06:00
+date: 2020-10-01T21:51:20+06:00
 draft: false
 tags: ["LOJ 1120", "Light OJ 1120", "Line Sweeping", "Multiset", "Editorial"]
 index: true

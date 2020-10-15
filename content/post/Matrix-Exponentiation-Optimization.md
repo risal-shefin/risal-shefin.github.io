@@ -1,12 +1,12 @@
-+++
-date = "2020-02-19T21:44:41+06:00"
-draft = false
-title = "Matrix Exponentiation: O(n²logx) per Query"
-tags = ["Matrix Exponentiation"]
-index = true
-description = "Matrix Exponentiation Optimization"
-highlight = true
-+++
+---
+date: "2020-02-19T21:44:41+06:00"
+draft: false
+title: "Matrix Exponentiation: O(n²logx) per Query"
+tags: ["Matrix Exponentiation"]
+index: true
+description: "Matrix Exponentiation Optimization"
+highlight: true
+---
 
 ## 
 [এই আর্টিকেল পড়তে অবশ্যই ম্যাট্রিক্স এক্সপোনেনশিয়েশন সম্পর্কে ভালো আইডিয়া থাকতে হবে । ]  

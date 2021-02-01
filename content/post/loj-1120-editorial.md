@@ -1,4 +1,3 @@
-
 ---
 title: "Light OJ 1120: Rectangle Union Editorial with Multiset"
 date: 2020-10-01T21:51:20+06:00

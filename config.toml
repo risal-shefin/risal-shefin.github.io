@@ -1,4 +1,4 @@
-baseurl = "https://shefin-cse16.github.io/"
+baseurl = "hhttps://risal-shefin.github.io/"
 theme = "hugo-geo2"
 relativeURLs = false
 languageCode = "en-us"
@@ -34,7 +34,7 @@ paginate = 5
 	url = "https://www.facebook.com/shahriar.shefin"
 	[[params.socialbuttons]]
 	faicon = "github"
-	url = "https://github.com/shefin-cse16"
+	url = "https://github.com/risal-shefin"
 	[[params.socialbuttons]]
 	faicon = "linkedin"
 	url = "https://www.linkedin.com/in/risal-shahriar-shefin/"
